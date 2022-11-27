@@ -102,7 +102,7 @@ jest.mock(
     const escapeStrings = (str: string) => str.replace(/'/, "'");
 
     const transformer: AsyncTransformer = {
-      getCacheKeyAsync: jest.fn(() => Promise.resolve('ab')),
+      getCacheKeyAsync: jest.fn(() => Promise.resolve('abd')),
       processAsync: (content, filename, config) =>
         Promise.resolve({
           code: (require('dedent') as typeof import('dedent'))`
