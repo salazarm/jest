@@ -1989,6 +1989,7 @@ describe('ScriptTransformer', () => {
       getCoverageOptions(),
     );
 
+    // Failing assertion below, actual number of calls is 3 instead of 4
     expect(fs.readFileSync).toHaveBeenCalledTimes(4);
     expect(fs.readFileSync).toHaveBeenCalledWith('/fruits/banana.js', 'utf8');
   });
